@@ -13,7 +13,7 @@ export const sendMail = (mailOpts) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(mailOpts)
+            body: mailOpts
         }).then((res)=>{
             console.log(res);
         }).then((res)=>{
