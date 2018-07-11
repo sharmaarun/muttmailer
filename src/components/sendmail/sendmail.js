@@ -67,6 +67,14 @@ const SendMail = ({ classes, onSend, sentMail, mailOpts, sendingMail }) => {
                         placeholder="(333-333-3333)"
                         defaultValue=""
                     />
+                    <TextField
+                        id="duration"
+                        label="EMI Duration"
+                        margin="normal"
+                        className={classes.textField}
+                        placeholder="##"
+                        defaultValue=""
+                    />
 
                 </div>
                 <div className={classes.col}>
@@ -118,6 +126,7 @@ const mapDispatchToProps = (dispatchEvent, oProps) => {
                 agentPhone: document.getElementById("agentPhone").value || "",
                 emi: document.getElementById("emi").value || "",
                 agentName: document.getElementById("agentName").value || "",
+                duration: document.getElementById("duration").value || "",
             };
             dispatchEvent(sendMail(mailOpts));
         },
